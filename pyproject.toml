@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packaged-cli-diagnostics"
+version = "1.0.0"
+description = "A small distributable CLI for inspecting Python, disk space, environment variables, and developer tools."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Python Software Engineering Project"}]
+dependencies = []
+
+[project.scripts]
+diagnostics = "diagnostics.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
